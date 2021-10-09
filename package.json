@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "vite-react-testing",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
