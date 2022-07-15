@@ -1,6 +1,6 @@
-const execSync = require('child_process').execSync
-const fs = require('fs')
-const path = require('path')
+import { execSync } from 'child_process'
+import fs from 'fs'
+import path from 'path'
 
 function isInGitRepository() {
   try {
@@ -59,12 +59,12 @@ const setupTestsFile = fs.existsSync(testsSetup)
   ? `<rootDir>/src/setupTests.${setupTestsFileExtension}`
   : undefined
 
-module.exports = {
+export default {
   roots: ['<rootDir>/src'],
 
   collectCoverageFrom: ['src/**/*.{js,jsx}'],
 
-  setupFiles: [require.resolve('whatwg-fetch')],
+  setupFiles: ['whatwg-fetch'],
 
   setupFilesAfterEnv: setupTestsFile ? [setupTestsFile] : [],
   testMatch: [
@@ -73,10 +73,9 @@ module.exports = {
   ],
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(js|jsx|mjs|cjs)$': require.resolve('babel-jest'),
-    '^.+\\.css$': require.resolve('./cssTransform.js'),
-    '^(?!.*\\.(js|jsx|mjs|cjs|css|json)$)':
-      require.resolve('./fileTransform.js')
+    '^.+\\.(js|jsx|mjs|cjs)$': 'babel-jest',
+    '^.+\\.css$': './cssTransform.js',
+    '^(?!.*\\.(js|jsx|mjs|cjs|css|json)$)': './fileTransform.js'
   },
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs)$',
@@ -95,5 +94,6 @@ module.exports = {
     'jest-watch-typeahead/filename',
     'jest-watch-typeahead/testname'
   ],
-  resetMocks: true
+  resetMocks: true,
+  extensionsToTreatAsEsm: ['.web.mjs', '.web.js', '.json', '.web.jsx', '.jsx']
 }
