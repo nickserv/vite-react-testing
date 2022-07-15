@@ -12,12 +12,13 @@
     "react-dom": "^17.0.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
+    "@babel/preset-react": "^7.14.5",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@vitejs/plugin-react": "^1.0.0",
     "babel-jest": "^27.2.5",
-    "babel-preset-react-app": "^10.0.0",
     "chalk": "^4.1.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.2.5",
