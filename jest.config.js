@@ -32,10 +32,6 @@ const moduleFileExtensions = [
   'mjs',
   'web.js',
   'js',
-  'web.ts',
-  'ts',
-  'web.tsx',
-  'tsx',
   'json',
   'web.jsx',
   'jsx'
@@ -54,43 +50,36 @@ const resolveModule = (resolveFn, filePath) => {
   return resolveFn(`${filePath}.js`)
 }
 
-const paths = {
-  appPath: resolveApp('.'),
-  appSrc: resolveApp('src'),
-  appTsConfig: resolveApp('tsconfig.json'),
-  appJsConfig: resolveApp('jsconfig.json'),
-  testsSetup: resolveModule(resolveApp, 'src/setupTests'),
-  appNodeModules: resolveApp('node_modules')
-}
+const testsSetup = resolveModule(resolveApp, 'src/setupTests')
 
-const setupTestsMatches = paths.testsSetup.match(/src[/\\]setupTests\.(.+)/)
+const setupTestsMatches = testsSetup.match(/src[/\\]setupTests\.(.+)/)
 const setupTestsFileExtension =
   (setupTestsMatches && setupTestsMatches[1]) || 'js'
-const setupTestsFile = fs.existsSync(paths.testsSetup)
+const setupTestsFile = fs.existsSync(testsSetup)
   ? `<rootDir>/src/setupTests.${setupTestsFileExtension}`
   : undefined
 
 module.exports = {
   roots: ['<rootDir>/src'],
 
-  collectCoverageFrom: ['src/**/*.{js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+  collectCoverageFrom: ['src/**/*.{js,jsx}'],
 
   setupFiles: [require.resolve('whatwg-fetch')],
 
   setupFilesAfterEnv: setupTestsFile ? [setupTestsFile] : [],
   testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'
+    '<rootDir>/src/**/__tests__/**/*.{js,jsx}',
+    '<rootDir>/src/**/*.{spec,test}.{js,jsx}'
   ],
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$': require.resolve('babel-jest'),
+    '^.+\\.(js|jsx|mjs|cjs)$': require.resolve('babel-jest'),
     '^.+\\.css$': require.resolve('./cssTransform.js'),
-    '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)':
+    '^(?!.*\\.(js|jsx|mjs|cjs|css|json)$)':
       require.resolve('./fileTransform.js')
   },
   transformIgnorePatterns: [
-    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$',
+    '[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs)$',
     '^.+\\.module\\.(css|sass|scss)$'
   ],
   moduleNameMapper: {
