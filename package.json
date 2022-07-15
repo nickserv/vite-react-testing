@@ -18,11 +18,19 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^14.2.5",
     "@vitejs/plugin-react": "^2.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-react-app": "^7.0.1",
     "jsdom": "^20.0.0",
     "prettier": "^2.7.1",
     "prettier-config-nick": "^1.0.2",
     "vite": "^3.0.0",
     "vitest": "^0.18.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "prettier": "prettier-config-nick"
 }
