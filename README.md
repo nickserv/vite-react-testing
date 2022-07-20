@@ -4,6 +4,8 @@ Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Test
 
 ![Vite + React + Testing](https://user-images.githubusercontent.com/927220/179299319-6357c886-d220-4cfd-beff-f3ffbbf9ee89.png)
 
+Using TypeScript? See the [TypeScript template](https://github.com/nickmccurdy/vite-react-testing-typescript).
+
 ## Goals
 
 - Easy migration from Create React App or Vite
