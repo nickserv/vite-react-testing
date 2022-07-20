@@ -22,8 +22,7 @@ node_modules
 coverage
 
 # Production
-dist
-dist-ssr
+build
 
 # Miscellaneous
 *.local
