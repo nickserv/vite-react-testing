@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     checker({
       eslint: {
-        lintCommand: "eslint .",
+        lintCommand: "eslint --ignore-path .gitignore .",
       },
     }),
   ],
