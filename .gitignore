@@ -9,10 +9,10 @@ lerna-debug.log*
 
 # Dependencies
 node_modules
-# comment for zero-install
+# Comment for zero-install
 .pnp.*
 .yarn/*
-# uncomment for zero-install
+# Uncomment for zero-install
 # !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
