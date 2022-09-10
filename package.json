@@ -22,11 +22,9 @@
     "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.1",
     "jsdom": "^20.0.0",
-    "optionator": "^0.9.1",
     "prettier": "^2.7.1",
     "prettier-config-nick": "^1.0.2",
     "vite": "^3.0.0",
-    "vite-plugin-checker": "^0.5.1",
     "vitest": "^0.23.0"
   },
   "eslintConfig": {
