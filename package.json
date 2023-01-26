@@ -21,11 +21,11 @@
     "@vitejs/plugin-react": "^3.0.0",
     "eslint": "^8.0.0",
     "eslint-config-react-app": "^7.0.1",
-    "jsdom": "^20.0.0",
+    "jsdom": "^21.1.0",
     "prettier": "^2.7.1",
     "prettier-config-nick": "^1.0.2",
     "vite": "^4.0.0",
-    "vitest": "^0.25.6"
+    "vitest": "^0.28.2"
   },
   "eslintConfig": {
     "extends": [
