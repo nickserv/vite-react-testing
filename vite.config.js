@@ -10,12 +10,6 @@ export default defineConfig({
   build: {
     outDir: "build",
     sourcemap: true,
-    commonjsOptions: {
-      include: [],
-    },
-  },
-  optimizeDeps: {
-    disabled: false,
   },
   test: {
     globals: true,
