@@ -1,6 +1,6 @@
 # Vite + React + Testing
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://reactjs.org/) app compatible with [Create React App](https://create-react-app.dev/)
+Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
 
 ![Vite + React + Testing](https://user-images.githubusercontent.com/927220/179299319-6357c886-d220-4cfd-beff-f3ffbbf9ee89.png)
 
