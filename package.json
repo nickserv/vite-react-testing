@@ -31,7 +31,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "react/jsx-no-target-blank": "off"
+    }
   },
   "prettier": "prettier-config-nick"
 }
