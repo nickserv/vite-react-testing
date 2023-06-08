@@ -26,7 +26,7 @@
     "prettier": "2.8.8",
     "prettier-config-nick": "^1.0.2",
     "vite": "^4.0.0",
-    "vitest": "^0.31.0"
+    "vitest": "^0.32.0"
   },
   "eslintConfig": {
     "extends": [
